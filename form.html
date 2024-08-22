@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Tech4Dev Digital For All</title>
+        <link rel="icon" href="favicon.ico.jpg" type="image/x-icon">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+        background-image:url(group-folders.786e7df1.svg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        padding: 30px;
+        }
+ 
+
+    
+        
+    /* Container for the header */ 
+    .container-header{
+        background-color: #4CAF50; 
+        background-image: url(confettiItems.02ceef7a.svg);
+        color: white;
+        font-weight: bold;
+        font-family: Arial,sans-serif;
+        padding: 30px;
+        width: 800px;  /*Width of the container */
+        margin: 30px auto; /* Center the container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/*  Slight shadow for depth*/
+        margin-bottom: 0;
+    }
+
+    /* Styling for the form container */
+
+    .form-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 5px;
+        width: 800px; /* Width of the container */
+        margin: 20px auto;  /*Center the container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: Arial, sans-serif;
+    }
+    /* styling the stepper and it content*/
+    .step-progress { 
+        display: flex; /* display all horizontalliy*/ 
+        padding-left: 40px;
+    }  
+
+    .step {
+        display: flex;
+        align-items: center;
+    }
+    
+    .circle{
+        height: 20px;  
+        width: 20px;  
+        border-radius: 50%;  
+        background-color: white;  
+        border: 2px solid gray;  
+        z-index: 1;  
+    }  
+
+    .line {    
+        height: 2px;  
+        background-color: gray;
+        width: 120px; 
+        color: rgb(119, 114, 114);
+        margin-left: 10px;
+        margin-right: 10px; 
+    }  
+
+    .step.active .circle {  
+        border-color: 2px solid #4caf50; /* Green border for completed steps */  
+        background-color: #28a745;
+    }
+    
+    /* styling of form*/
+    .form {
+        display: flex;
+        flex-direction: column
+    }
+
+    .form-label{
+        font-weight: bold;
+        display: inline-block;/*  Ensure the label takes up only the necessary width */
+     }
+
+     input[type="tel"],  
+     input[type="text"],
+     input[type="number"],
+     input[type="email"],
+     .form-control {  
+         width: 80%;  
+         padding: 10px;  
+         margin-bottom: 20px;  
+         border: 1px solid #ccc;  
+         border-radius: 8px;  
+    } 
+    .form-select{
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 20px;
+
+    } 
+    
+    .radio-label input[type="radio"]{
+        width: 20px;/*fixed width*/
+        height: 20px;/*fixed height*/
+        margin-right: 10px;/*space between radio and label*/
+        margin-left: 10px;
+    }
+
+    .radio-label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    /* styling the footer*/
+    .button {
+        padding: 10px;
+        background-color:#4fbb4f;
+        color: white;
+        cursor: pointer;
+    }
+        .button:hover{
+            background-color: #004d40;
+        }
+    /* styling the footer*/    
+    .footer{
+         position: fixed;
+         display: flex;
+         justify-content: space-between;
+         width: 90%;
+         bottom: 0;
+         background-color: white; /* You can customize the background color */
+         color: rgb(155, 152, 152); /* Customize the text color */
+         padding: 10px 5px;
+         z-index: 1000; /* Ensures the footer stays on top */
+         font-size: 90%;
+         font-family: Arial, sans-serif;
+        }
+        
+        .text-right img {
+            height: 20px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    </style>
+    </head>
+        
+    <body>
+        <!--starting of body-->       
+        <div class="container-header">
+            <h2>Registration</h2>
+            <p>INSTRUCTION</p>
+            <p>Welcome to the Digital for All Challenge 2.0 application stage. kindly register by completing the various fiels of this form brfore summiting your application. Ensure to provide correct information as applicants will be disqualified if found to have summited false information. All asterisked (*) fields are compulsory and must be provided. click on submit form when you are done. By filling this form, you consen Tech4Dev to use your data for moniterimg,Evaluation,Research and Learning purposes.</p>
+       </div>
+       <div class="form-container">
+            <div class="step-progress">  
+            <div class="step active"> 
+                <div class="circle"></div>
+                <div class="line"></div>
+            </div>
+            <div class="step">
+                <div class="circle"></div>  
+                <div class="line"></div>
+            </div>
+            <div class="step">  
+                <div class="circle"></div>  
+                <div class="line"></div>
+            </div>
+            <div class="step">
+                <div class="circle"></div>  
+                <div class="line"></div>
+            </div>
+            <div class="step">  
+                <div class="circle"></div>
+            </div>  
+            </div>  
+         <p style="font-weight: bold;padding: 20px;">The Information you provide in this section will help us to know you.</p>
+            <form>
+             <div class="row">
+                <div class="col-sm-6">
+                    <label for="fname" class="form-label">First Name<span class="text-warning">*</span></label><br>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" class="form-control"><br>
+
+                    <label for="lname" class="form-label">Last Name <span class="text-danger">*</span></label><br>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" class="form-control">
+
+                    <div class="radio-label">
+                    <label for="gender" class="form-label">Gender <span class="text-danger">*</span></label>
+                    <input type="radio" id="male" name="gender" value="male" class="checkmark">
+                    <label for="gender">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" class="checkmark">
+                    <label for="female">Female</label><br>
+                    </div>
+                    
+                    <label for="mail" class="form-label">Email<span class="text-danger">*</span></label><br>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+
+                    <!--Start of gender -->
+                    
+                    <label for="status" class="form-label">Marital Status<span class="text-danger">*</span></label>
+                    <div class="radio-label">
+                        <input type="radio" id="single" name="fav_language" value="single">
+                        <label for="single"> single/Never Married</label>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" id="married" name="fav_language" value="married">
+                        <label for="married"> Married</label>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" id="divorced" name="fav_language" value="divorced">
+                        <label for="divorced">Divorced</label>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" id="separated" name="fav_language" value="separated">
+                        <label for="separated">Saparated</label><br>
+                    </div>
+                    <div class="radio-label">
+                        <input type="radio" id="widowed" name="fav_language" value="widowed">
+                        <label for="widowed">Widowed</label><br>
+                    </div>
+                    <!--start of state of origin-->
+                    <label for="state" class=" form-label">State Of Origin<span class="text-danger">*</span></label><br>
+                    <select id="state" name="state" class="form-select" required>
+                        <option value="" disabled selected>Select State</option>
+                        <option value="abia">Abia</option>
+                        <option value="adamawa">Adamawa</option>
+                        <option value="akwa">Akwa Ibom</option>
+                        <option value="anambra">Anambra</option>
+                        <option value="bauchi">Bauchi</option>
+                        <option value="benue">Benue</option>
+                        <option value="borno">Borno</option>
+                        <option value="bayelsa">Bayelsa</option>
+                        <option value="cross">Cross River</option>
+                        <option value="delta">Delta</option>
+                        <option value="ebonyi">Ebonyi</option>
+                        <option value="edo">Edo</option>
+                        <option value="ekiti">Ekiti</option>
+                        <option value="enugu">Enugu</option>
+                        <option value="fct">Federa Capital Territory</option>
+                        <option value="gombe">Gombe</option>
+                        <option value="imo">Imo</option>
+                        <option value="jigawa">Jigawa</option>
+                        <option value="kebbi">Kebbi</option>
+                        <option value="kaduna">Kaduna</option>
+                        <option value="kano">Kano</option>
+                        <option value="kogi">Kogi</option>
+                        <option value="kastina">Kastina</option>
+                        <option value="kwara">Kwara</option>
+                        <option value="lagos">Lagos</option>
+                        <option value="nassarawa">Nassarawa</option>
+                        <option value="niger">Niger</option>
+                        <option value="ogun">Ogun</option>
+                        <option value="Ondo">Ondo</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="plateau">Plateau</option>
+                        <option value="rivers">Rivers</option>
+                        <option value="sokoto">Sokoto</option>
+                        <option value="taraba">Taraba</option>
+                        <option value="yobe">Yobe</option>
+                        <option value="zamfara">Zamfara</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label for="mname" class="form-label">Middle Name</label><br>
+                    <input type="text" id="mname" name="mname" placeholder="Middle Name" class="form-control" required><br>
+
+                    <label for="phone" class="form-label">Phone Number (i.e +234xxxxxxxx)<span class="text-danger">*</span></label><br>
+                    <input type="tel" id="Phone" placeholder="Phone Number"pattern="+23409131974519" class="form-control" required><br><br>
+
+                    <label for="age" class="form-label">Age (i.e 30)<span class="text-danger">*</span></label><br>
+                    <input type="number" id="age" name="age" placeholder="age" class="form-control" required><br><br><br><br><br><br><br><br><br>
+
+                    <label for="state" class="form-label">Current State of Residence<span class="text-danger">*</span></label><br>
+                    <select id="state" name="state" class="form-select" required>
+                        <option value="" disabled selected>select state</option>
+                        <option value="abia">Abia</option>
+                        <option value="adamawa">Adamawa</option>
+                        <option value="akwa">Akwa Ibom</option>
+                        <option value="anambra">Anambra</option>
+                        <option value="bauchi">Bauch</option>
+                        <option value="benue">Benue</option>
+                        <option value="borno">Borno</option>
+                        <option value="bayelsa">Bayelsa</option>
+                        <option value="cross">Cross River</option>
+                        <option value="delta">Delta</option>
+                        <option value="ebonyi">Ebonyi</option>
+                        <option value="edo">Edo</option>
+                        <option value="ekiti">Ekiti</option>
+                        <option value="enugu">Enugu</option>
+                        <option value="fct">Federa Capital Territory</option>
+                        <option value="gombe">Gombe</option>
+                        <option value="imo">Imo</option>
+                        <option value="jigawa">Jigawa</option>
+                        <option value="kebbi">Kebbi</option>
+                        <option value="kaduna">Kaduna</option>
+                        <option value="kano">Kano</option>
+                        <option value="kogi">Kogi</option>
+                        <option value="kastina">Kastina</option>
+                        <option value="kwara">Kwara</option>
+                        <option value="lagos">Lagos</option>
+                        <option value="nassarawa">Nassarawa</option>
+                        <option value="niger">Niger</option>
+                        <option value="ogun">Ogun</option>
+                        <option value="Ondo">Ondo</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="plateau">Plateau</option>
+                        <option value="rivers">Rivers</option>
+                        <option value="sokoto">Sokoto</option>
+                        <option value="taraba">Taraba</option>
+                        <option value="yobe">Yobe</option>
+                        <option value="zamfara">Zamfara</option>
+                    </select>
+                </div>
+            </div><br>
+            <!--close of form and  begin of another statement-->
+             <label for="area" class="form-label">Types of residential area<span class="text-danger">*</span></label>
+             <div class="radio-label">
+                 <input type="radio" id="urban" name="place" value="urban">
+                 <label for="urban" class=> Urban (an area with moderate to high basic amenities such as good road network, good electricity supply, hospitals schools etc.)</label>
+             </div>
+             <div class="radio-label">
+                 <input type="radio" id="semi-urban" name="place" value="urban">
+                 <label for="semi-urban"> Semi-Urban(an area with some level or presence of basic amenities-electricity,road network, hospitals,schools etc.)</label>
+             </div>
+             <div class="radio-label">
+                 <input type="radio" id="rural" name="place" value="rural">
+                 <label for="rural"> Rural (an area with little or no presence of basic amenities-electricity, road network,hospitals,schools, etc.)</label>
+             </div>                      
+
+            <div style="text-align: right;">
+                <button type="submit" class="btn btn-success text-right">Next</button>
+            </div>
+        </form>  
+       </div>
+        <div class="footer">
+            <div class="text-left">
+                <i class="bi bi-c-circle"></i>Digital for All Challenge 2024. All rights reserved.
+            </div>
+            <div class="text-right">
+                powered by <img src="prunedge.svg" alt="logo">
+            </div>
+        </div>
+        <script href="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
